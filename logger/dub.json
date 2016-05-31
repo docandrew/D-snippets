@@ -1,0 +1,13 @@
+{
+	"name": "logger",
+	"description": "A simple vibe.d server application.",
+	"copyright": "Copyright © 2015, jon",
+	"license": "Public Domain",
+	"authors": ["jon"],
+	"dependencies": {
+		"vibe-d": "~>0.7.19"
+	},
+	"versions": ["VibeDefaultMain"],
+	"lflags": ["-L/usr/lib/x86_64-linux-gnu"],
+	"libs": ["ssl", "event", "event_pthreads", "crypto"]
+}

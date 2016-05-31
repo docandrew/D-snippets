@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flight Logger</title>
+	<link href="styles/theme.css" rel="stylesheet">
+	<link href="jquery-ui.min.css" rel="stylesheet">
+	<script src="external/jquery/jquery.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="loggerInterface.js"></script>
+</head>
+<body>
+	<div id="headline">
+		<div class="container">
+			<header>
+				<h1>Flight Logger</h1>
+				<h2>Be Experienced.</h2>
+				<p>Track your flight time and keep up to date with your aircraft's inspections.</p>
+			</header>
+		
+			<div id="hours">
+				<h2>Your Experience</h2>
+				<div id="hoursAccordion">
+					<h3 id="totalFlightHours">Flight Hours:</h3>
+					<div>
+						<ul>
+							<li id="primaryHours">PIC Time:</li>
+							<li id="secondaryHours">SIC Time:</li>
+							<li id="instructorHours">Instructor Time:</li>
+							<li id="evaluatorHours">Evaluator Time:</li>
+							<li id="instrumentHours">Instrument Time:</li>
+							<li id="dualReceivedHours">Dual Received:</li>
+							<li id="nightHours">Night Time:</li>
+						</ul>
+					</div>
+					<h3 id="simulatorHours">Simulator Hours:</h3>
+					<div>
+						<ul>
+							<li id="simulatedInstrumentHours">Instrument:</li>
+							<li id="simulatorInstructorHours">Instructor:</li>
+						</ul>
+					</div>
+					<h3 id="militaryHours">Military Hours:</h3>
+					<div>
+						<ul>
+							<li id="nvgHours">NVG Time:</li>
+							<li id="combatHours">Combat Time:</li>
+							<li id="combatSupportHours">Combat Support Time:</li>
+							<li id="otherHours">Other Time</li>
+						</ul>
+					</div>
+					<h3>Currencies</h3>
+					<div>
+						<ul>
+							<li id="lastFlight">Last Flight:</li>
+							<li id="lastLanding">Last Landing:</li>
+							<li id="lastNightLanding">Last Night Landing:</li>
+							<li id="lastInstrumentApproach">Last Instrument Approach:</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<form method="post" id="addFlight">
+			<h2>Log a Flight</h2>
+			<ul>
+			<label for="date">Date</label>				<!-- use date picker widget -->
+			<input type="text" name="date" id="date" required>
+			<label for="tail">Tail Number</label>
+			<input type="text" name="tail" id="tail" placeholder="96-0811" required>
+			<label for="type">Aircraft Type</label>
+			<input type="text" name="type" id="type" placeholder="Tex2" required>
+			<label for="origin">Origin</label>
+			<input type="text" name="origin" id="origin" placeholder="KDLF" required>
+			<label for="destination">Destination</label>
+			<input type="text" name="destination" id="destination" placeholder="KDLF" required>
+			<label for="takeoffTime">Takeoff Time</label>
+			<input type="text" name="takeoffTime" id="takeoffTime">
+			<label for="duration">Duration</label>
+			<input type="text" name="duration" id="duration" placeholder="1.3" required>
+			<label for="remarks">Remarks</label>
+			<input type="text" name="remarks" id="remarks" placeholder="Best hamburger ever">
+			<br><br>
+			<center><button type="submit" name="submitFlight" id="submitFlight">Log It!</button></center>
+			</ul>
+		</form>
+		<br>
+	</div>
+
+	<div id="hoursByAirframe">
+			<h2>Hours By Airframe</h2>
+			<div id="aircraftHoursTabs">
+				<ul>
+					<li><a href="#aircraftHoursOne">PA-28</a></li>
+					<li><a href="#aircraftHoursTwo">T-6A</a></li>
+					<li><a href="#aircraftHoursThree">MC-130P</a></li>
+				</ul>
+				<div id="aircraftHoursOne">
+					<ul>
+						<li>Total Time:</li>
+						<li>Primary Time:</li>
+						<li>Secondary Time:</li>
+						<li>Instructor Time:</li>
+						<li>Last Flight:</li>
+					</ul>
+				</div>
+				<div id="aircraftHoursTwo">
+					<ul>
+						<li>Total Time:</li>
+						<li>Primary Time:</li>
+						<li>Secondary Time:</li>
+						<li>Instructor Time:</li>
+						<li>Last Flight:</li>
+					</ul>
+				</div>
+				<div id="aircraftHoursThree">
+					<ul>
+						<li>Total Time:</li>
+						<li>Primary Time:</li>
+						<li>Secondary Time:</li>
+						<li>Instructor Time:</li>
+						<li>Last Flight:</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+
+	<div id="myAircraft">
+		<h2>Your Aircraft</h2>
+		<div id="myAircraftTabs">
+			<ul>
+				<li><a href="#myAircraftOne">96-0811</a></li>
+				<li><a href="#myAircraftTwo">N12345</a></li>
+			</ul>
+			<div id="myAircraftOne">
+				<ul>
+					<li>TTAF:</li>
+					<li>SMOH:</li>
+					<li>Built:</li>
+					<li>Registered:</li>
+				</ul>
+				<p>Inspections</p>
+				<ul>
+					<li>Last Flight:</li>
+					<li>Last Annual:</li>
+					<li>Next Annual Due:</li>
+					<li>Time at Last 100 Hr Inspection:</li>
+					<li>Hours Until Next 100 Hr Inspection:</li>
+					<li>Last IFR Static Cert:</li>
+					<li>Next IFR Static Cert:</li>
+					<li>Last Oil Change:</li>
+				</ul>
+			</div>
+			<div id="myAircraftTwo">
+				<ul>
+					<li>TTAF:</li>
+					<li>SMOH:</li>
+					<li>Built:</li>
+					<li>Registered:</li>
+				</ul>
+				<p>Inspections</p>
+				<ul>
+					<li>Last Flight:</li>
+					<li>Last Annual:</li>
+					<li>Next Annual Due:</li>
+					<li>Time at Last 100 Hr Inspection:</li>
+					<li>Hours Until Next 100 Hr Inspection:</li>
+					<li>Last IFR Static Cert:</li>
+					<li>Next IFR Static Cert:</li>
+					<li>Last Oil Change:</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+	<h2>Developed by Arkaeology Software</h2>
+	<p>v0.0.1</p>
+	<br>
+	<button name="exitProgram" id="exitProgram">Exit Flight Logger</button>
+	</footer>
+</body>
+</html>

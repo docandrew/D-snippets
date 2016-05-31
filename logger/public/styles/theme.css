@@ -1,0 +1,252 @@
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+#headline 
+{
+	padding: 0.8em;
+	color: white;
+	font-family: Roboto, helvetica, arial, sans-serif;
+	background-color: rgb(140, 140, 130);
+	background-image: url(/images/background.jpg);
+	background-size: cover;
+}
+
+#headline h1
+{
+	font-weight: 200;
+	font-size: 60px;
+	line-height: 1em;
+	margin-bottom: 0;
+}
+
+#headline h2
+{
+	font-weight: 200;
+	font-size: 30px;
+	margin-top: 5px;
+}
+
+#headline #hours
+{
+	font-weight: 200;
+	font-size: 18px;
+}
+
+#headline #addFlight
+{
+	background-color: rgba(050, 100, 170, 0.7);
+	padding: 1em;
+	box-shadow: 5px 5px 10px rgb(025, 50, 85);
+}
+
+#headline #addFlight h2
+{
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+}
+
+#headline #addFlight label
+{
+	font-size: 1.0em;
+	font-weight: 200;
+	padding-top: 10px;
+	display: block;
+}
+
+#headline #addFlight input
+{
+	width: 100%;
+	font-size: 18px;
+	font-weight: 200;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+/*#headline #addFlight button
+{	
+	align-self: center;
+	background-color: hsl(8, 70%, 54%);
+	color:white;
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	box-sizing: border-box;
+	font-size: 18px;
+}*/
+
+ul
+{
+	padding-left: 0;
+	list-style-type: none;
+}
+
+li
+{
+	text-align: left;
+	margin-top: 5px;
+}
+
+#hoursByAirframe #myAircraft
+{
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+#hoursByAirframe h2 #myAircraft h2
+{
+	margin-top: 20px;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+#hoursByAirframe
+{
+	background-color: white;
+	font-family: Roboto, sans-serif;
+	font-weight: 100;
+	font-size: 18px;
+}
+
+#hoursByAirframe h2
+{
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+
+#hoursByAirframe h2 + p
+{
+}
+
+#myAircraft
+{
+	background-color: white;
+	font-family: Roboto, sans-serif;
+	font-weight: 100;
+	font-size: 18px;
+}
+
+#myAircraft h2
+{
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+
+#myAircraft h2 + p
+{
+
+}
+
+#myAircraft div
+{
+}
+
+#myAircraft div img
+{
+	width: 100%;
+}
+
+footer
+{
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	text-align: center;
+	background-color: rgb(50, 100, 170);
+	color: white;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+thead
+{
+	font-weight: bold;
+}
+
+tbody
+{
+	text-align: center;
+}
+
+@media screen and (min-width: 600px)
+{
+	.container
+	{
+		margin: auto;
+		max-width: 800px;
+	}
+
+	#headline
+	{
+		padding: 20px 5%;
+	}
+
+	#headline #hours 
+	{
+		float: left;
+		font-weight: 200;
+		width: 50%;
+		font-size: 18px;
+		box-sizing: border-box;
+		padding-right: 10px;
+	}
+
+	#headline #addFlight
+	{
+		float: right;
+		padding: 20px;
+		width: 50%;
+		box-sizing: border-box;
+		font-weight: 200;
+	}
+
+	#headline br
+	{
+		clear: both;
+	}
+
+	/*#hoursByAirframe #myAircraft
+	{
+		box-sizing: border-box;
+		padding: 10px 20% 80px 20%;
+	}
+
+	#hoursByAirframe h2 #myAircraft h2
+	{
+		margin-top: 0;
+		font-size: 60px;
+	}*/
+
+	/*#hoursByAirframe ul
+	{
+		box-sizing: border-box;
+		float: center;
+		width: 50%;
+		padding-right: 1em;
+	}*/
+
+	/*#hoursByAirframe br
+	{
+		clear: both;
+	}
+
+	#myAircraft div img
+	{
+		width: 30%;
+		margin: 1%;
+		box-sizing: border-box;
+		border-radius: 50% 50%;
+		box-shadow: black 0px 0px 5px;
+	}*/
+}
